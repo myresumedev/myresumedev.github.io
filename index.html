@@ -34,7 +34,21 @@
 <body>
 
 	<script>
-	alert('ssss');
+		(function(){
+		 
+			window.console.log = function(){
+			console.error('Sorry , developers tools are blocked here....');
+			window.console.log = function() {
+				return false;
+			}
+			}
+
+			console.log('test');	
+		});
+		</script>	
+
+	<script>
+	alert('ssss');	
 	</script>
 	<div class="preloader" style="display: none;">
 			<div class="spinner"><strong>Loading...<i class="fa-li fa fa-spinner fa-spin"></i></strong></div>
