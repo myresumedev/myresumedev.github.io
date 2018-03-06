@@ -1,3 +1,16 @@
+
+<?php
+
+
+define("APP_NAME","Local Education Plan"); //ชื่อโปรแกรม
+define("TITLE","Local Education Plan : ".$title); // Title
+define("DESCRIPTION","ระบบการประเมินคุณภาพแผนพัฒนาการศึกษาขององค์กรปกครองส่วนท้องถิ่น"); //คำอธิบายโปรแกรม
+define("AUTHOR","ipower.co.th"); //ผู้สร้าง
+define("KEYWORD",""); // คำค้นหา
+define("FOOTER","© 2018 SBMLD Plan by ipower.co.th");
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="en" class="csstransforms csstransforms3d csstransitions">
@@ -6,9 +19,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	
-	<title>FDzFerrir </title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<title>myresume </title>
+	<!-- <meta name="description" content="FDzFenris">
+	<meta name="author" content="FDzFenris"> -->
+
+	<meta name="description" content="<?=DESCRIPTION?>">
+    <meta name="keywords" content="<?=KEYWORD?>">
+  	<meta name="author" content="<?=AUTHOR?>">
 
 	<link href="./fdzferrir/css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="./fdzferrir/bootstrap.min.css" type="text/css" media="screen">
@@ -37,6 +54,7 @@
 	<div class="inline-menu-container hidex">
 	
 		<ul class="inline-menu">
+		
 			<li class="about menu-item">Resume</li>	
 			<li class="portfolio menu-item">Portfolio</li>
 			<li class="blog menu-item">Blog</li>		
