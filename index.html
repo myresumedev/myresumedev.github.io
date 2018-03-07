@@ -15,15 +15,15 @@
     <meta name="keywords" content="FDzFenris">
   	<meta name="author" content="FDzFenris">
 
-	<link href="./fdzferrir/css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="./fdzferrir/bootstrap.min.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="./fdzferrir/font-awesome.min.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="./fdzferrir/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="./fdzferrir/animate.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="./fdzferrir/style.css" type="text/css" media="screen">
+<!-- 	<link href="fdzferrir/css" rel="stylesheet" type="text/css"> -->
+	<link rel="stylesheet" href="fdzferrir/bootstrap.min.css" type="text/css" media="screen">
+	<!-- <link rel="stylesheet" href="fdzferrir/font-awesome.min.css" type="text/css" media="screen"> -->
+	<link rel="stylesheet" href="fdzferrir/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="fdzferrir/animate.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="fdzferrir/style.css" type="text/css" media="screen">
 
 	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-	<script type="text/javascript" src="invisible_debut.js" ></script>
+<!-- 	<script type="text/javascript" src="invisible_debut.js" ></script> -->
 
 
 
@@ -35,17 +35,39 @@
 <body oncontextmenu="return false">
 
 		<script>
+			window.console.log = function(){
+			console.error('myResume blocked here.... ');
+			console.error('(อันแหนะ ยังเข้ามาได้นะ อิอิ อันนี้บล็อกไม่ได้ละ T T) ');
+			
+			window.console.log = function() {
+				return false;
+  }
+}
 				console.log('aaaaaaaaaaaa');	
 			//alert('ssss');	
 			</script>
 
-<script type="text/javascript">
+<script >
+
+	$(document).keydown(function(event){
+    if(event.keyCode==123){
+        return false;
+    }
+    else if (event.ctrlKey && event.shiftKey && event.keyCode==73){        
+             return false;
+    }
+});
+
+$(document).on("contextmenu",function(e){        
+   e.preventDefault();
+});
+
     function mousehandler(e) {
         var myevent = (isNS) ? e : event;
         var eventbutton = (isNS) ? myevent.which : myevent.button;
         if ((eventbutton == 2) || (eventbutton == 3)) return false;
     }
-    //document.oncontextmenu = mischandler;
+	document.oncontextmenu = mischandler;
     document.onmousedown = mousehandler;
     document.onmouseup = mousehandler;
     function disableCtrlKeyCombination(e) {
@@ -292,6 +314,14 @@
 								</div>
 							</div>
 
+							<label class="progress-bar-label"> - Github - <span></span></label>
+							<div class="progress">
+								<div style="width: 85%;" class="progress-bar" role="progressbar" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100">
+									<span>85%</span>
+								</div>
+							</div>
+
+
 							<label class="progress-bar-label">- Photoshop - <span></span></label>
 							<div class="progress">
 								<div style="width: 80%;" class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
@@ -305,6 +335,7 @@
 								</div>
 							</div>
 
+							
 
 
 					</div>
